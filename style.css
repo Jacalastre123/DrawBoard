@@ -16,7 +16,20 @@
         overflow-x: scroll;
        
       }
-    
+      @media print {
+        body * {
+          visibility: hidden;
+        
+        }
+        #contain, #contain * {
+          visibility: visible
+        }
+        #contain {
+          position: absolute;
+          left: 2px;
+          top: 2px;
+        }
+      }
       .section {
         flex: 0 0 auto;
       margin: 10px;
