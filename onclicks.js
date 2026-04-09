@@ -48,6 +48,9 @@
           })
           document.body.querySelectorAll(".text").forEach(item => item.remove())
           document.querySelectorAll(".clock").forEach(item => item.remove())
+           document.getElementById("clock").innerText = "Enable"
+              canvas.width = window.innerWidth + 1
+      canvas.height = Number(window.innerHeight) - 10
          }
          else if (e.target.id === "newText") {
           let canDrag = false
