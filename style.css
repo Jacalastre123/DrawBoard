@@ -21,13 +21,13 @@
         flex: 0 0 auto;
       margin: 10px;
         width: 30vw;
-        background-color: rgba(20, 175, 250, 0.66);
+        background-color: rgba(20, 175, 250, 0.64);
         padding: 5px;
         border-radius: 10px;
         text-align: center;
        min-height: 80%;
      text-align: center;
-      box-shadow: 5px 7px 5px black;  
+      box-shadow: 5px 7px 5px grey;  
       }
       div .section {
             min-height: 80%;
