@@ -18,10 +18,7 @@ canvas.width = window.innerWidth + 1
          
       ranges.addEventListener("input", thickTest) 
      start.showModal()
-setInterval(function() {
-         canvas.width = window.innerWidth + 1
-      canvas.height = Number(window.innerHeight) - 10
-}, 50)
+
        function thickTest() {
        
         const thickness = document.getElementById("thickness")
