@@ -118,6 +118,10 @@
   position: absolute;
   top: 10px;
   left: 40px;
+  cursor: grab;
+}
+.clock:active {
+  cursor: grabbing;
 }
 .section[type="extras"] {
   font-size: 1.0em;
