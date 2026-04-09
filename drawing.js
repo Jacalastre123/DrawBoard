@@ -28,10 +28,11 @@ if (dragging) {
             ctx.lineCap = "round"
                        
           if (eraser) {
-
+             ctx.globalCompositeOperation = "destination-out"
             ctx.strokeStyle = "white"
           }
           else {
+                 ctx.globalCompositeOperation = "source-over"
             ctx.strokeStyle = prior
           }
    
@@ -39,10 +40,13 @@ if (dragging) {
 }
 if (square && !eraser) {
   ctx.fillStyle = prior
+      ctx.globalCompositeOperation = "source-over"
   ctx.fillRect(e.clientX - canvasRect.x - (rectWidth / 2), e.clientY - canvasRect.y - (rectHeight / 2), rectWidth, rectHeight )
 }
 if (circle && !eraser) {
+       ctx.globalCompositeOperation = "source-over"
   ctx.beginPath()
+     
   ctx.arc(e.clientX - canvasRect.x, e.clientY - canvasRect.y, 20, 0, Math.PI * 2)
 ctx.fillStyle = prior
 ctx.strokeStyle = prior
