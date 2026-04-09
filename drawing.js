@@ -2,6 +2,13 @@
       canvas.addEventListener("mousedown", e => {
         dragging = true
         if (!square || circle || (!circle && !square)) {
+              if (eraser) {
+                    ctx.globalCompositeOperation = "destination-out"
+                    
+              }
+              else {
+                    ctx.globalCompositeOperation = "source-over"
+              }
          ctx.beginPath()
          if (!circle) {
           const canvasRect = canvas.getBoundingClientRect()
