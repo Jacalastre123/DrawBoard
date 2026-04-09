@@ -23,7 +23,7 @@ if (dragging) {
      
 
       const canvasRect = canvas.getBoundingClientRect()
-      if (!square || eraser) {
+      if (!square) {
       ctx.lineTo(e.clientX - canvasRect.x, e.clientY - canvasRect.y )
             ctx.lineCap = "round"
                        
