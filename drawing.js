@@ -1,7 +1,7 @@
 
       canvas.addEventListener("mousedown", e => {
         dragging = true
-        if (!square || circle || (!circle && !square)) {
+        if ((!circle && !square)) {
               if (eraser) {
                     ctx.globalCompositeOperation = "destination-out"
                     
@@ -40,11 +40,11 @@ if (dragging) {
 }
 if (square && !eraser) {
   ctx.fillStyle = prior
-      ctx.globalCompositeOperation = "source-over"
+     
   ctx.fillRect(e.clientX - canvasRect.x - (rectWidth / 2), e.clientY - canvasRect.y - (rectHeight / 2), rectWidth, rectHeight )
 }
 if (circle && !eraser) {
-       ctx.globalCompositeOperation = "source-over"
+   
   ctx.beginPath()
      
   ctx.arc(e.clientX - canvasRect.x, e.clientY - canvasRect.y, 20, 0, Math.PI * 2)
