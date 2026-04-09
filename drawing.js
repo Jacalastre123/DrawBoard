@@ -23,13 +23,13 @@ if (dragging) {
      
 
       const canvasRect = canvas.getBoundingClientRect()
-      if (!square) {
+      if ((!square && !circle) || eraser) {
       ctx.lineTo(e.clientX - canvasRect.x, e.clientY - canvasRect.y )
             ctx.lineCap = "round"
                        
           if (eraser) {
              ctx.globalCompositeOperation = "destination-out"
-            ctx.strokeStyle = "white"
+         
           }
           else {
                  ctx.globalCompositeOperation = "source-over"
