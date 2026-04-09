@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Miranda+Sans:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>DrawBoard</h1>
+  <div id="contain">
+    <canvas id="canvas" height="2000%" width="120%" ></canvas>
+    </div>
+    <div id="floater">
+
+     <div class="cover">
+      <div class="section">
+        <form>
+          <input type="color" id="colour">
+          <label for="colour">Colour</label>
+        </form>
+        <button id="strokeStyles">Submit</button>
+      </div>
+      <div class="section">
+        <input type="checkbox" id="erase"><label for="erase">Eraser</label>
+        
+      </div>
+   
+      </div>
+      <div class="section">
+        <form>
+          <input type="range" id="ranges" min='1' max='50' value="1"><br>
+          <label for="ranges" id="thickLabel">Thickness (1):</label><br>
+          <canvas height="50" width="100" style="border: 1px solid black;" id="thickness"></canvas>
+        </form>
+        <button id="thicks">Submit</button>
+      </div>
+      <div class="cover">
+       <div class="section">
+        <form>
+           <label for="image">Image: </label>
+          <input type="file" id="file" accept="image/*">
+        </form>
+      
+      </div>
+      <div class="section">
+
+      <button id="clearBoard">Clear Board</button>
+       <button id="delete">Delete Image/Text</button>
+        </div>
+        </div>
+        <div class="cover">
+       <div class="section">
+        <form>
+          <label for="size">Size (px):</label>
+          <input type="number" min="0" max="100" value="20" id="size"><br>
+          <label for="text">Text:</label>
+          <input type="text" id="text" placeholder="Text" >
+        </form>
+        <button id="newText">New Text</button>
+       </div>
+       <div class="section" type="small">
+        <p>Shapes:</p>
+           <button id="square">Square</button>
+      <button id="circle">Circle</button>
+        </div>
+       </div>
+       <div class="section" type="utilities">
+        <p>Utilities</p>
+        <button id="borders">Enable Borders</button>
+     
+
+<button id="dark">Dark Mode</button>
+<button id="saving">Save</button>
+<br>
+     
+    
+       </div>
+        <div class="section" type="extras">
+          <div style="display: flex; align-items: center; gap: 10px;">
+      <p>Text to Speech:</p>
+      <button id="TTS">Start</button>
+      </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+      <p>Clock Widget: </p>
+      <button id="clock">Enable</button>
+      </div>
+     </div>
+    </div>
+
+    <dialog id="Start">
+      <h4>Welcome to DrawBoard</h4>
+      <p>Here is the guide for each of the functions: </p>
+      <ul>
+        <li>Colour: Colour of shape/line</li>
+        <li>Eraser: Erase lines</li>
+        <li>Thickness: Change thickness of line</li>
+        <li>Image: Load a draggable image</li>
+        <li>Clear Board/Delete Image/Text: Clear the whole board/delete specific image or text (Get the specific image/text by clicking it afterwards)</li>
+        <li>Text: Creates draggable text</li>
+        <li>Shapes: Make a Square or Circle</li>
+        <li>Utilities: Make Borders, darken the screen or save as jpg</li>
+        <li>Text to Speech: To speak selected text (Select by clicking on the text afterwards)</li>
+        <li>Clock Widget: Makes a draggable clock widget of the time live.</li>
+      </ul>
+      <button id="closure">Close</button>
+    </dialog>
+    
+    <script src="setup.js"></script>
+    <script src="Input.js"></script>
+    <script src="onclicks.js"></script>
+    <script src="drawing.js"></script>
+</body>
+</html>

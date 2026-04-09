@@ -1,0 +1,145 @@
+  #floater { 
+        height: 20vh;
+         width: 95vw;
+          background-color: rgb(15, 108, 237);
+          position: absolute;
+          top: 70%;
+          left: 2.2%;
+          padding: 5px;
+          border-radius: 10px;
+          box-shadow: 0px 2px 15px black;
+
+        display: flex;
+
+        flex-direction: row;
+        align-items: center;
+        overflow-x: scroll;
+       
+      }
+    
+      .section {
+        flex: 0 0 auto;
+      margin: 10px;
+        width: 30vw;
+        background-color: rgba(255, 255, 255, 0.461);
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+       min-height: 80%;
+     text-align: center;
+        
+      }
+      div .section {
+            min-height: 80%;
+      }
+     img {
+      height: 20vh;
+      position: absolute;
+      top:100px;
+      left:  200px;
+     }
+     
+   .text {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    cursor: grab;
+
+   }
+   .text:active {
+    cursor: grabbing;
+   }
+
+   img {
+    cursor: grab;
+    box-shadow: 5px 7px 10px black;
+   }
+   img:active {
+    cursor: grabbing;
+   }
+   body {
+    font-family: Miranda Sans
+   }
+   #text {
+    width: 65%;
+   }
+  
+   .cover {
+    height: 8.2vh;
+    position: relative;
+    top: -45px;
+   }
+
+
+   button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+   }
+
+   h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+   }
+   #clearBoard, #delete {
+    width: 100%;
+    height: 80%;
+   }
+   #erase {
+    height: 3em;
+    width: 3em;
+   }
+   label[for="erase"] {
+    font-size: 2em;
+    position: relative;
+    top: -7px;
+   }
+
+   .section[type="utilities"] button {
+    font-size: 1.1em;
+    margin: 5px;
+   }
+   .cover .section[type="small"] {
+    height: 4.5vh;
+    min-height: 0%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   }
+  .section[type="small"] button {
+    font-size: 1.15em;
+  }
+.clock {
+  background-color: lightblue;
+  font-size: 4em;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+.section[type="extras"] {
+  font-size: 1.0em;
+  height: 3vh;
+ padding: 5px;
+ padding-top: 1px;
+
+}
+
+
+.section[type="extras"] button {
+    width: 50%;
+    font-size: 1.0em;
+    
+  
+}
+#Start {
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+#Start button {
+    font-size: 2.3em;
+}
