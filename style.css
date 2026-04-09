@@ -1,7 +1,7 @@
   #floater { 
         height: 20vh;
          width: 95vw;
-          background-color: rgb(15, 108, 237);
+          background-color: white;
           position: absolute;
           top: 70%;
           left: 2.2%;
@@ -21,13 +21,13 @@
         flex: 0 0 auto;
       margin: 10px;
         width: 30vw;
-        background-color: rgba(255, 255, 255, 0.461);
+        background-color: rgba(17, 168, 249, 0.66);
         padding: 5px;
         border-radius: 10px;
         text-align: center;
        min-height: 80%;
      text-align: center;
-        
+      box-shadow: 5px 7px 5px black;  
       }
       div .section {
             min-height: 80%;
