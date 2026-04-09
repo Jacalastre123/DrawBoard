@@ -12,13 +12,16 @@
       let circle = false
       let speech = false
        let dragging = false
-
-
-                canvas.width = window.innerWidth + 1
+canvas.width = window.innerWidth + 1
       canvas.height = Number(window.innerHeight) - 10
+
+         
       ranges.addEventListener("input", thickTest) 
      start.showModal()
-
+setInterval(function() {
+         canvas.width = window.innerWidth + 1
+      canvas.height = Number(window.innerHeight) - 10
+}, 50)
        function thickTest() {
        
         const thickness = document.getElementById("thickness")
