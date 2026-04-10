@@ -21,7 +21,7 @@
           }
           else {
            
-            eraser = falsed
+            eraser = false
             if (square) {
          document.getElementById("square").click()
           document.getElementById("square").click()
