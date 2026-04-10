@@ -124,9 +124,9 @@
     font-size: 1.15em;
   }
 .clock {
-  background-color: lightblue;
-  font-size: 4em;
-  padding: 10px;
+  background-color: rgb(169, 219, 235);
+  font-size: 5em;
+  padding: 15px;
   border-radius: 10px;
   position: absolute;
   top: 10px;

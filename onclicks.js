@@ -52,8 +52,11 @@
             item.remove()
           })
           document.body.querySelectorAll(".text").forEach(item => item.remove())
-          document.querySelectorAll(".clock").forEach(item => item.remove())
-           document.getElementById("clock").innerText = "Enable"
+          document.querySelectorAll(".clock").forEach(item => {
+            item.remove()
+            document.getElementById("clock").innerText = "Enable"
+          })
+         
               canvas.width = window.innerWidth + 1
       canvas.height = Number(window.innerHeight) - 10
          }
@@ -81,11 +84,15 @@
               event.preventDefault()
               text.style.top = (event.clientY - offsetY) + "px"
               text.style.left = (event.clientX - offsetX) + "px"
-
+              
             }
           })
           document.addEventListener("mouseup", () => {
             canDrag = false
+            if (!colliding(text.getBoundingClientRect(), canvas.getBoundingClientRect())) {
+                text.remove()
+                
+              }
           })
           document.addEventListener("mouseleave", () => {
             canDrag = false
@@ -107,6 +114,11 @@
           else {
           canvas.style.border = "1px solid black"
           e.target.innerText = "Disable Borders"
+        
+          }
+          let clockQuery = document.querySelectorAll(".clock")
+          if (clockQuery[0]) {
+            document.getElementById("clock").innerText = "Disable"
           }
          }
          else if (e.target.id === "print") {
@@ -213,6 +225,14 @@
             })
             document.addEventListener("mouseup", event => {
               isDraggable = false
+             if (!colliding(clockWidget.getBoundingClientRect(), canvas.getBoundingClientRect())) {
+              clockWidget.remove()
+              e.target.innerText = "Enable"
+             }
+            })
+             document.addEventListener("mouseleave", event => {
+              isDraggable = false
+              
             })
             contain.appendChild(clockWidget)
             e.target.innerText = "Disable"
@@ -269,6 +289,6 @@
           speech = false
           document.body.style.cursor = "auto"
          }
-         
+         console.log(e.target.id)
       })
      

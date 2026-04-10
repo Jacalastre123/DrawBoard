@@ -31,5 +31,14 @@ canvas.width = window.innerWidth + 1
         tctx.stroke()
         document.getElementById("thickLabel").innerText = "Thickness (" + ranges.value + "):"
       }
+
+      function colliding(a, b) {
+        return (
+          a.x < b.x + b.width &&
+          a.x + a.width > b.x &&
+          a.y < b.y + b.height &&
+          a.y + a.height > b.y
+        )
+      }
       thickTest()
     
