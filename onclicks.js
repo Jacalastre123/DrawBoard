@@ -23,6 +23,7 @@
            
             eraser = false
           }
+    
           document.getElementById("square").click()
           document.getElementById("square").click()
           document.getElementById("square").click()
