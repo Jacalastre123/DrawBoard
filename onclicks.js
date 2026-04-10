@@ -172,9 +172,10 @@
             circle = false
           e.target.innerText = "Circle"
           }
-          
+          else {
           circle = true
           e.target.innerText = "Drawing Circles"
+          }
           if (square) {
             document.getElementById("square").innerText = "Square"
           square = false
