@@ -57,7 +57,9 @@
     top: 100px;
     left: 200px;
     cursor: grab;
-
+    max-width: 45vw;
+    max-height: 30vh;
+    overflow: scroll;
    }
    .text:active {
     cursor: grabbing;

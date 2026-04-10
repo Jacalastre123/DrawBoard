@@ -75,9 +75,9 @@
           text.addEventListener("mousedown", event => {
             canDrag = true
 
-           
-           offsetX = event.clientX - text.offsetLeft
-            offsetY = (event.clientY - text.offsetTop) + text.offsetHeight
+           const textRect = text.getBoundingClientRect()
+           offsetX = event.clientX - textRect.x
+            offsetY = (event.clientY - textRect.y)
           })
           document.addEventListener("mousemove", event => {
             if (canDrag) {
