@@ -38,7 +38,7 @@
         }
         else if (e.target.tagName === "IMG" && deletes) {
           e.target.remove(); 
-          console.log(e.target + "done")
+         
           deletes = false
            speech = false
           document.body.style.cursor = "auto"
@@ -143,7 +143,7 @@
          else if (e.target.id === "square") {
           square = true
            speech = false
-          console.log("works")
+        
           if (rectWidth === 2) {
           rectWidth = 30
           rectHeight = 30
@@ -247,7 +247,7 @@
           speech = true
           deletes = false
           document.body.style.cursor = "crosshair"
-          console.log(speech)  
+        
          }
          else if (e.target.classList.contains("text") && speech){
           let newSpeech = new SpeechSynthesisUtterance(e.target.innerText)
@@ -289,6 +289,6 @@
           speech = false
           document.body.style.cursor = "auto"
          }
-         console.log(e.target.id)
+        
       })
      
