@@ -16,27 +16,16 @@
         else if (e.target.id === "erase") {
           deletes = false
            speech = false
-          if (document.getElementById("erase").checked) {
-            eraser = true
-          }
-          else {
-           
-            eraser = false
-            if (square) {
-         document.getElementById("square").click()
-          document.getElementById("square").click()
-          document.getElementById("square").click()
-          document.getElementById("square").click()
-          document.getElementById("square").click()
-
-            }
-
-            if (circle) {
-          document.getElementById("circle").click()
-          document.getElementById("circle").click()
-            }
-          }
+                    if (!eraser) {
+                      eraser = true
+  
+    ctx.strokeStyle = "white"
+  }
+  else {
+      eraser = false
     
+    ctx.strokeStyle = prior
+  }
 
           
         }
@@ -274,6 +263,7 @@
           deletes = false
           speech = false
            document.body.style.cursor = "auto"
+          
          }
          else if (speech) {
           speech = false

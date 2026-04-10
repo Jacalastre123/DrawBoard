@@ -2,45 +2,34 @@
       canvas.addEventListener("mousedown", e => {
         dragging = true
         if ((!circle && !square)) {
-              if (eraser) {
-                    ctx.globalCompositeOperation = "destination-out"
-                    
-              }
-              else {
-                    ctx.globalCompositeOperation = "source-over"
-              }
+         
          ctx.beginPath()
-         if (!circle) {
+       
           const canvasRect = canvas.getBoundingClientRect()
-           ctx.lineTo(e.clientX - canvasRect.x, e.clientY - canvasRect.y )
-         }
+    ctx.moveTo(e.clientX - canvasRect.x, e.clientY - canvasRect.y)    
+
+ 
         }
       })
     document.addEventListener("mousemove", e => {
    
 if (dragging) {
- 
+    ctx.globalCompositeOperation = eraser ? "destination-out": "source-over"
      
-
+          
       const canvasRect = canvas.getBoundingClientRect()
       if ((!square && !circle) || eraser) {
       ctx.lineTo(e.clientX - canvasRect.x, e.clientY - canvasRect.y )
             ctx.lineCap = "round"
-                       
-          if (eraser) {
-             ctx.globalCompositeOperation = "destination-out"
-         
-          }
-          else {
-                 ctx.globalCompositeOperation = "source-over"
-            ctx.strokeStyle = prior
-          }
+                
+       
    
       ctx.stroke()
-}
+}   
 if (square && !eraser) {
+ 
   ctx.fillStyle = prior
-     
+    
   ctx.fillRect(e.clientX - canvasRect.x - (rectWidth / 2), e.clientY - canvasRect.y - (rectHeight / 2), rectWidth, rectHeight )
 }
 if (circle && !eraser) {
@@ -51,6 +40,7 @@ if (circle && !eraser) {
 ctx.fillStyle = prior
 ctx.strokeStyle = prior
 ctx.stroke()
+ ctx.closePath()
 }
 
 }
@@ -60,7 +50,11 @@ ctx.stroke()
 
     canvas.addEventListener("mouseup", e => {
       dragging = false
+      ctx.closePath()
+               ctx.beginPath()
     })
     canvas.addEventListener("mouseleave", e => {
       dragging = false
+       ctx.closePath()       
+         ctx.beginPath()
     })
