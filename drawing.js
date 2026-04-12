@@ -1,5 +1,5 @@
 
-      canvas.addEventListener("mousedown", e => {
+      canvas.addEventListener("pointerdown", e => {
         dragging = true
         if ((!circle && !square)) {
          
@@ -11,7 +11,7 @@
  
         }
       })
-    document.addEventListener("mousemove", e => {
+    document.addEventListener("pointermove", e => {
    
 if (dragging) {
     ctx.globalCompositeOperation = eraser ? "destination-out": "source-over"
@@ -48,7 +48,7 @@ ctx.stroke()
 
     })
 
-    canvas.addEventListener("mouseup", e => {
+    canvas.addEventListener("pointerup", e => {
       dragging = false
       ctx.closePath()
                ctx.beginPath()
